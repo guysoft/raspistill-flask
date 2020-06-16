@@ -1,0 +1,7 @@
+[Unit]
+Description=webcam
+After=multi-user.target
+[Service]
+ExecStart=/home/pi/get_camera/src/app.py
+[Install]
+WantedBy=multi-user.target
