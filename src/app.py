@@ -18,7 +18,7 @@ def get_file(filename):  # pragma: no cover
 
 @app.route("/")
 def hello():
-    temp_path = tempfile.mktemp(suffix=".jpg")
+    temp_path = tempfile.mktemp(suffix=".jpg", prefix='/ram/')
     print(temp_path)
     os.system("sudo raspistill -drc high -o " + temp_path)
     content = get_file(temp_path)
